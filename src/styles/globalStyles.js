@@ -5,19 +5,19 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif; // Use a more modern font
-    background-color: #f7f9fc; // Light background
-    color: #333; // Text color
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
   }
   h1, h2, h3 {
-    font-family: 'Georgia', serif; // Different font for headings
+    font-family: 'Georgia', serif;
   }
   a {
-    text-decoration: none; // Remove underline from links
-    color: #3498db; // Link color
+    text-decoration: none;
+    color: #3498db;
   }
   a:hover {
-    text-decoration: underline; // Underline on hover
+    text-decoration: underline;
   }
 `;
 

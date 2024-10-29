@@ -1,26 +1,28 @@
-// BirthdayCard.js
 import React from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
 
-const Card = styled(animated.div)`
-  width: 300px;
-  padding: 20px;
-  background-color: #ffefd5;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin: auto;
+const Card = styled.div`
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
-const BirthdayCard = ({ name, message, image }) => {
-  const fade = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 200 });
+const Title = styled.h2`
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+`;
 
+const BirthdayCard = ({ name, date }) => {
   return (
-    <Card style={fade}>
-      <img src={image} alt="Birthday" style={{ width: '100%', borderRadius: '10px' }} />
-      <h2>Happy Birthday, {name}!</h2>
-      <p>{message}</p>
+    <Card>
+      <Title>{name}</Title>
+      <p>Birthday: {date}</p>
     </Card>
   );
 };

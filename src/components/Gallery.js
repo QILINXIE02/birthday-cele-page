@@ -1,23 +1,22 @@
-// src/components/Gallery.js
 import React from 'react';
-import Gallery from 'react-photo-gallery';
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css'; // Include the styles
 
-const MyGallery = () => {
-    const photos = [
-        {
-            src: 'https://example.com/image1.jpg',
-            width: 4,
-            height: 3,
-        },
-        {
-            src: 'https://example.com/image2.jpg',
-            width: 1,
-            height: 1,
-        },
-        // Add more photos as needed
-    ];
+const images = [
+  {
+    original: 'images/birthday.jpg',  // Local image path
+    thumbnail: 'images/birthday.jpg',  // Use the same image for thumbnail
+    description: 'Birthday Celebration', // Description for the image
+  },
+];
 
-    return <Gallery photos={photos} />;
+const PhotoGallery = () => {
+  return (
+    <div>
+      <h1>Photo Gallery</h1>
+      <Gallery items={images} />
+    </div>
+  );
 };
 
-export default MyGallery;
+export default PhotoGallery;
